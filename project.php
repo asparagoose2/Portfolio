@@ -69,6 +69,7 @@
                 <br>
                 <br>
                 <p><?php echo $project["description"] ?></p>
+                <?php echo '<a href="'.$project["git_link"].'">View on GitHub</a>'; ?>
                 <br>
                 <br>
                 <h4>

@@ -1,11 +1,20 @@
 <?php
     include "db.php";
+
     $query = "select * from portfolio_ofirduchovne";
+    $query = mysqli_real_escape_string($connection, $query);    
     $result = mysqli_query($connection,$query);
-    $projects = mysqli_fetch_all($result,MYSQLI_BOTH);
-    if (!$projects) {
+
+    if(!mysqli_num_rows($result) > 0) {
         die("DB query faild");
     }
+    
+    // $query = "select * from portfolio_ofirduchovne";
+    // $result = mysqli_query($connection,$query);
+    // $projects = mysqli_fetch_all($result,MYSQLI_BOTH);
+    // if (!$projects) {
+    //     die("DB query faild");
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -146,10 +155,15 @@
                 </h3>
                 <section id="projects">
                 <?php
-                    foreach($projects as &$project) {
+                    while($project = mysqli_fetch_assoc($result))
+                    {
                         echo '<a href="project.php?projectId='.$project["project_id"].'"><section class="project"><img src="images/'.$project["thumbnail"].'" alt=""><h4>'.
                         $project["name"].'</h4><h6>'.$project["language"].'</h6></section>';
                     }
+                    // foreach($projects as &$project) {
+                    //     echo '<a href="project.php?projectId='.$project["project_id"].'"><section class="project"><img src="images/'.$project["thumbnail"].'" alt=""><h4>'.
+                    //     $project["name"].'</h4><h6>'.$project["language"].'</h6></section>';
+                    // }
                 ?>
                     <div class="clear"></div>
                 </section>
