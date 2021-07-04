@@ -2,6 +2,9 @@ a {
     text-decoration: none;
     color: #c5c5c5;
 }
+a:hover {
+    color: #c5c5c5;
+}
 .page{
     position: relative;
     width: 100%;
@@ -67,12 +70,6 @@ a {
     background-repeat: no-repeat;
 }
 
-.fa-linkedin {
-
-  color: #c5c5c5;
-  text-decoration: none;
-  transform: scale(1.6);
-}
 
 .techIcon {
     max-height: 50px;
@@ -106,6 +103,25 @@ footer {
     left: 0;
     bottom: 0;
 }
+
+footer span {
+    color: #c5c5c5;
+}
+
+.socialMediaLinks {
+    display: flex; 
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.fa-linkedin, .fa-github {
+    color: #c5c5c5;
+    text-decoration: none;
+    transform: scale(1.6);
+    margin: 0px 14px
+  }
+  
 
 .cvSection > section > ul > li {
     font-size: 1.2em;
@@ -154,8 +170,20 @@ footer {
     margin-bottom: 15px;
 }
 
-@media only screen  and (max-width: 966px){
+.text-white p {
+    font-size: 1.3em;
+}
 
+.projectImage {
+    max-width: 60%;
+    /* margin-left: 20%; */
+}
+
+@media only screen  and (max-width: 966px){
+    .projectImage {
+        max-width: 100%;
+        margin-left: 0%;
+    }
     .project {
         width: 45%;
     }

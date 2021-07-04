@@ -1,3 +1,13 @@
+<?php
+    include "db.php";
+    $query = "select * from portfolio_ofirduchovne";
+    $result = mysqli_query($connection,$query);
+    $projects = mysqli_fetch_all($result,MYSQLI_BOTH);
+    if (!$projects) {
+        die("DB query faild");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">About Me</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">About Me</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
@@ -135,26 +145,12 @@
                     Projects
                 </h3>
                 <section id="projects">
-                    <section class="project">
-                        <img src="images/yoda.jpg" alt="">
-                        <h4>Title</h4>
-                        <h6>C++</h6>
-                    </section>
-                    <section class="project">
-                        <img src="images/yoda.jpg" alt="">
-                        <h4>Title</h4>
-                        <h6>C++</h6>
-                    </section>
-                    <section class="project">
-                        <img src="images/yoda.jpg" alt="">
-                        <h4>Title</h4>
-                        <h6>C++</h6>
-                    </section>
-                    <section class="project">
-                        <img src="images/yoda.jpg" alt="">
-                        <h4>Title</h4>
-                        <h6>C++</h6>
-                    </section>
+                <?php
+                    foreach($projects as &$project) {
+                        echo '<a href="project.php?projectId='.$project["project_id"].'"><section class="project"><img src="images/'.$project["thumbnail"].'" alt=""><h4>'.
+                        $project["name"].'</h4><h6>'.$project["language"].'</h6></section>';
+                    }
+                ?>
                     <div class="clear"></div>
                 </section>
                 <br>
@@ -180,7 +176,7 @@
         </div>
         <footer>
             <div class="row g-3 ">
-                <div class="col-md-4 col-10">
+                <div class="col-md-4 col-9">
                     <section id="contactInfo" class="text-white">
                         <a href="mailto:ofirduchovne@gmail.com">ofirduchovne@gmail.com</a>
                         <br>
@@ -188,11 +184,13 @@
                         <br>
                     </section>
                 </div>
-                <div class="col-md-4 col-2 text-center">
-                    <p style="display: inline-block; text-align: center;">
+                <div class="col-md-4 col-3 text-center">
+                    <secton class="socialMediaLinks">
                         <a href="https://www.linkedin.com/in/ofir-duchovne/" class="fa fa-linkedin"
                             style="display: inline-block; text-align: center;"></a>
-                    </p>
+                        <a href="https://www.linkedin.com/in/ofir-duchovne/" class="fa fa-github"
+                            style="display: inline-block; text-align: center;"></a>
+                    </secton>
                 </div>
                 <div class="col-md-4 col-12 text-end">
                     <a href=" https://www.shenkar.ac.il/he/departments/engineering-software-department">תואר ראשון
