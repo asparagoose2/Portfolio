@@ -1,0 +1,169 @@
+a {
+    text-decoration: none;
+    color: #c5c5c5;
+}
+.page{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    min-height: 100%;
+    max-width: 1330px;
+    padding: 20px;
+}
+
+.profilePic {
+    background: url("../images/myPicture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: calc(100% - 25px);
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10000px;
+    max-height: 250px;
+}
+
+.photoContainer {
+   max-height: 100px; 
+}
+ h5 + p {
+    color:#c5c5c5;
+ }
+.photo {
+    padding: 13%;
+}
+
+.title {
+    border-bottom: 3px solid rgb(40, 70, 151);
+    display: inline;
+}
+
+.skillDesc {
+    margin-left: 15px;
+}
+
+#skill1 {
+    background: url(../images/teamwork.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#skill2 {
+    background: url(../images/problem-solving.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#skill3 {
+    background: url(../images/goal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#skill4 {
+    background: url(../images/chat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fa-linkedin {
+
+  color: #c5c5c5;
+  text-decoration: none;
+  transform: scale(1.6);
+}
+
+.techIcon {
+    max-height: 50px;
+    transition-duration: 300ms;
+}
+
+.techIcon:hover {
+    transform: scale(2);
+    transition-duration: 300ms;
+}
+
+.techIconContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img.techIcon {
+    margin: 10px 10px;
+}
+
+footer {
+    border-top: 2px solid rgb(29, 29, 29);
+    padding-top: 20px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    margin: 60px 0 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.cvSection > section > ul > li {
+    font-size: 1.2em;
+    color: #ffffffdd;
+}
+
+.cvSection > p {
+    color: #ffffffdd;
+    font-size: 1.2em;
+}
+.cvSection > h5 {
+    color: #ffffff99;
+}
+.cvSection > h4 {
+    color: #ffffff99;
+}
+
+.cvSection > h1 {
+    margin-top: 50px;
+}
+
+.cvSection > section {
+    margin-bottom: 40px;
+}
+.cvSection > section:last-of-type {
+    margin-bottom: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.project {
+    margin-top: 25px;
+    width: 30%;
+    float: left;
+}
+.project h6, .project h4 {
+    text-align: center;
+}
+
+.project img {
+    width: 80%;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+@media only screen  and (max-width: 966px){
+
+    .project {
+        width: 45%;
+    }
+}
+@media only screen  and (max-width: 767px){
+
+    .project {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
