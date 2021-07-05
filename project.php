@@ -92,7 +92,7 @@
                     <secton class="socialMediaLinks">
                         <a href="https://www.linkedin.com/in/ofir-duchovne/" class="fa fa-linkedin"
                             style="display: inline-block; text-align: center;"></a>
-                        <a href="https://www.linkedin.com/in/ofir-duchovne/" class="fa fa-github"
+                        <a href="https://github.com/asparagoose2" class="fa fa-github"
                             style="display: inline-block; text-align: center;"></a>
                     </secton>
                 </div>
